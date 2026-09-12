@@ -1,0 +1,1 @@
+fetch("https://pokeapi.co/api/v2/pokemon/pikachu").then(r => r.json()).then(console.log);
