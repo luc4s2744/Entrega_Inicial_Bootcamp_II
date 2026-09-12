@@ -1,0 +1,154 @@
+/* Reset básico e tipografia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #222; /* Fundo escuro para destacar a Pokédex */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* =========================================
+   CABEÇALHO (Header)
+   ========================================= */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: #ffcb05; /* Amarelo Pokémon */
+  /* Contorno azul clássico no texto */
+  text-shadow: 2px 2px 0 #3b4cca, -2px -2px 0 #3b4cca, 2px -2px 0 #3b4cca, -2px 2px 0 #3b4cca; 
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+/* =========================================
+   CORPO DA POKÉDEX (Main)
+   ========================================= */
+main {
+  background-color: #dc0a2d; /* Vermelho clássico */
+  border-radius: 15px;
+  padding: 25px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  border: 4px solid #8b0000;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =========================================
+   ÁREA DE BUSCA (section class="busca")
+   ========================================= */
+.busca {
+  display: flex;
+  gap: 10px;
+}
+
+#campo-busca {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#botao-buscar {
+  padding: 10px 20px;
+  background-color: #3b4cca; /* Azul Pokémon */
+  color: #ffcb05; /* Amarelo Pokémon */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.1s, background-color 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+#botao-buscar:hover {
+  background-color: #2a3a9a;
+}
+
+#botao-buscar:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+}
+
+/* =========================================
+   TELA DE RESULTADO (section id="resultado")
+   ========================================= */
+#resultado {
+  background-color: #dedede;
+  border: 15px solid #fff;
+  /* Borda inferior esquerda arredondada simulando a tela clássica */
+  border-radius: 10px 10px 10px 45px; 
+  padding: 20px;
+  text-align: center;
+  min-height: 280px; /* Garante tamanho mesmo sem conteúdo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* 
+  Estilos previstos para o conteúdo que o JavaScript vai injetar.
+  Se você criar imagens, <h2> para o nome e <p> para tipos/IDs,
+  eles já ficarão estilizados automaticamente!
+*/
+#resultado img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  filter: drop-shadow(3px 5px 5px rgba(0,0,0,0.4));
+}
+
+#resultado h2 {
+  text-transform: capitalize; /* Primeira letra sempre maiúscula */
+  margin-top: 10px;
+  color: #222;
+  font-size: 1.8rem;
+}
+
+#resultado p {
+  background-color: #222;
+  color: #43f03b; /* Verde estilo tela retrô/terminal */
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-top: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.8);
+}
+
+/* =========================================
+   RODAPÉ (Footer)
+   ========================================= */
+footer {
+  margin-top: 30px;
+  color: #777;
+  font-size: 0.85rem;
+  text-align: center;
+}
